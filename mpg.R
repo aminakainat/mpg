@@ -15,12 +15,12 @@ dim(mpg)
 # Structure of dataset (data types)
 str(mpg)
 
-# 3️⃣ Data Cleaning
+#Data Cleaning
 colSums(is.na(mpg))
 sum(duplicated(mpg))
 sapply(mpg, class)
 
-# 4️⃣ Univariate Analysis
+#Univariate Analysis
 par(mfrow = c(2, 2))
 hist(mpg$hwy, main = "Distribution of Highway MPG", col = "skyblue", xlab = "Highway MPG")
 hist(mpg$cty, main = "Distribution of City MPG", col = "orange", xlab = "City MPG")
@@ -45,4 +45,5 @@ cat("• Target Variable: hwy (Highway Mileage)\n")
 cat("• Strong Predictors: displ (Engine Size), cyl (Cylinders), cty (City Mileage)\n")
 cat("• Supporting Categorical Features: manufacturer, model, drv, class, trans, fl\n")
 cat("These variables can be used in regression or classification models depending on the goal.\n")
+
 
